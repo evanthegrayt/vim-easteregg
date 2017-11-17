@@ -268,7 +268,11 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
     exec "hi ".a:group." gui=none cterm=none"
   else
     if a:attr == 'italic'
-      exec "hi ".a:group." gui=".a:attr." cterm=italic"
+      if exists('g:easteregg_use_italics') && g:easteregg_use_italics
+        exec "hi ".a:group." gui=".a:attr." cterm=italic"
+      else
+        exec "hi ".a:group." gui=".a:attr." cterm='NONE'"
+      endif
     else
       exec "hi ".a:group." gui=".a:attr." cterm=".a:attr
     endif
@@ -306,13 +310,13 @@ call s:X("Visual","f1adff","302028","underline","","")
 call s:X("Cursor","000000","c4ffc8","underline","","")
 " Non-code Text (THE TOP LINE SETS THE BACKGROUND!)
 call s:X("Normal","e8e8d3","1B1D1E","","","")
-call s:X("LineNr","eeeeee","000000","underline","","")
+call s:X("LineNr","eeeeee","000000","italic","","")
 call s:X("Comment","616161","000000","italic","","")
 call s:X("Todo","82c78f","000000","bold","","")
 " Status Lines
 call s:X("StatusLineNC","000000","eeeeee","bold","","")
 call s:X("StatusLine","000000","eeeeee","bold","","")
-call s:X("VertSplit","000000","eeeeee","bold","","")
+call s:X("VertSplit","eeeeee","000000","bold","","")
 " Folds
 call s:X("Folded","a0a8b0","384048","underline","","")
 call s:X("FoldColumn","a0a8b0","384048","","","")
