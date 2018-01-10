@@ -379,6 +379,9 @@ call s:X("DiffAdd","","032218","","","")
 call s:X("DiffChange","","100920","","","")
 call s:X("DiffDelete","220000","220000","","","")
 call s:X("DiffText","","000940","","","")
+" Spelling
+call s:X("SpellBad", "000000", "f06363", "bold", "", "")
+call s:X("SpellCap", "000000", "de97ab", "bold", "", "")
 
 hi link Error ErrorMsg
 
