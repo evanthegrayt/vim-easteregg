@@ -10,11 +10,11 @@ When I have more time, I'm probably going to fork the newest version of
 `Jellybeans` and add my colors, as they handle italics and Graphical `vim`
 settings better.
 
+![vim script](resource/vimscript.jpg)
+
 ## Configuration
 This theme looks best with italics, but this is not enabled by default. To
 enable italics, add this line to your `vimrc`, before setting the colorscheme:
-
-[vim script](resource/vimscript.jpg)
 
 ```vim
 let g:easteregg_use_italics = 1
