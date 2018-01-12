@@ -10,11 +10,9 @@ When I have more time, I'm probably going to fork the newest version of
 `Jellybeans` and add my colors, as they handle italics and Graphical `vim`
 settings better.
 
-## Examples
-[bash](resource/bash.jpg)
-
-[ruby](resource/ruby.jpg)
-
+## Screenshot Examples
+[bash](resource/bash.jpg)\
+[ruby](resource/ruby.jpg)\
 [vim script](resource/vimscript.jpg)
 
 ## Configuration
