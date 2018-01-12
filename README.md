@@ -12,7 +12,9 @@ settings better.
 
 ## Examples
 [bash](resource/bash.jpg)
+
 [ruby](resource/ruby.jpg)
+
 [vim script](resource/vimscript.jpg)
 
 ## Configuration
