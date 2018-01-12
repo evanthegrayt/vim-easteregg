@@ -1,5 +1,5 @@
 # vim-easteregg
-A colorful, dark-themed colorscheme for `vim`, inspired by 
+A colorful, dark-themed colorscheme for `vim`, inspired by
 [Jellybeans.vim](https://github.com/nanotech/jellybeans.vim/blob/master/colors/jellybeans.vim)
 
 ## About
@@ -10,7 +10,10 @@ When I have more time, I'm probably going to fork the newest version of
 `Jellybeans` and add my colors, as they handle italics and Graphical `vim`
 settings better.
 
-![vim script](resource/vimscript.jpg)
+## Examples
+[bash](resource/bash.jpg)
+[ruby](resource/ruby.jpg)
+[vim script](resource/vimscript.jpg)
 
 ## Configuration
 This theme looks best with italics, but this is not enabled by default. To
