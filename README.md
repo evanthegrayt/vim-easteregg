@@ -14,7 +14,7 @@ settings better.
 This theme looks best with italics, but this is not enabled by default. To
 enable italics, add this line to your `vimrc`, before setting the colorscheme:
 
-[vim script](resource/vim.jpg)
+[vim script](resource/vimscript.jpg)
 
 ```vim
 let g:easteregg_use_italics = 1
