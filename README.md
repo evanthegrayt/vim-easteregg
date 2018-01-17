@@ -10,6 +10,12 @@ tried to keep a lot of them pastel-ish. The colors and the inspiration from
 `Jellybeans` is where I got the name `Easteregg`.
 
 ## Screenshot Examples
+The font used in the examples is [11pt. Hack](https://sourcefoundry.org/hack/).
+
+```vim
+set guifont=Hack:h11
+```
+
 [bash](resource/bash.jpg)\
 [ruby](resource/ruby.jpg)\
 [c++](resource/cpp.jpg)\
