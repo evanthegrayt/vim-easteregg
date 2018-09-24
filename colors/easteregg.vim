@@ -327,7 +327,7 @@ call s:X("Constant","cf6a4c","","italic","","")
 call s:X("String","de97ab","","","","")
 call s:X("Character","c7b6db","","","","")
 call s:X("Number","6bbfbb","","","","")
-call s:X("Boolean","6bbfbb","","","","")
+call s:X("Boolean","6bbfbb","","italic","","")
 call s:X("Float","6bbfbb","","","","")
 " Identifiers
 call s:X("Identifier","fa8989","","","","")
