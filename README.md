@@ -16,10 +16,10 @@ The font used in the examples is [11pt. Hack](https://sourcefoundry.org/hack/).
 set guifont=Hack:h11
 ```
 
-[bash](resource/bash.jpg)\
-[ruby](resource/ruby.jpg)\
-[c++](resource/cpp.jpg)\
-[vim script](resource/vimscript.jpg)
+![bash](resource/bash.jpg)\
+![ruby](resource/ruby.jpg)\
+![c++](resource/cpp.jpg)\
+![vim script](resource/vimscript.jpg)
 
 ## Installation
 ### Version 8
