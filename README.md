@@ -39,9 +39,11 @@ If you're not interested in keeping the plugin up to date, just put the
 ## Configuration
 This theme looks best with italics, but this is not enabled by default. To
 enable italics, add this line to your `vimrc`, before setting the colorscheme:
-
 ```vim
 let g:easteregg_use_italics = 1
 colorscheme easteregg
 ```
+If your terminal doesn't have italics enabled (which is default for most
+terminal emulators), you'll need to [research how to enable them
+](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3).
 
