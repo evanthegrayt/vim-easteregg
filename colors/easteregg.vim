@@ -286,16 +286,15 @@ if version >= 700
   call s:X("CSVColumnHeaderEven","","8f5370","","","")
   call s:X("CSVColumnOdd","","536991","","","")
   call s:X("CSVColumnEven","","8f5370","","","")
-
+  " CursorLine/Column
   call s:X("CursorLine","","000000","","","")
   call s:X("CursorColumn","","000000","","","")
   call s:X("ColorColumn","","000000","","","")
   call s:X("MatchParen","a56aa8","474545","bold","","")
-
+  " TabLink
   call s:X("TabLine","000000","b0b8c0","italic","","")
   call s:X("TabLineFill","9098a0","","","","")
   call s:X("TabLineSel","000000","f0f0f0","italic,bold","","")
-
   "Auto-completion
   call s:X("Pmenu","C3C3C3","222222","","","")
   call s:X("PmenuSel","cae682","404040","","","")
@@ -304,6 +303,11 @@ if version >= 700
   " Indent Guides
   call s:X("IndentGuidesOdd","616161","000000","bold","","")
   call s:X("IndentGuidesEven","000000","616161","bold","","")
+  " Git Gutter
+  call s:X("GitGutterAdd","66ff66","000000","","","")
+  call s:X("GitGutterChange","ebdf32","000000","","","")
+  call s:X("GitGutterDelete","eb3232","000000","","","")
+  call s:X("GitGutterChangeDelete","eb3232","000000","","","")
 endif
 " Visual Mode and Cursor
 call s:X("Visual","f1adff","302028","underline","","")
