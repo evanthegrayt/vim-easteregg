@@ -315,7 +315,7 @@ call s:X("Cursor","000000","c4ffc8","underline","","")
 " Non-code Text (THE TOP LINE SETS THE BACKGROUND!)
 call s:X("Normal","e8e8d3","1B1D1E","","","")
 call s:X("LineNr","eeeeee","000000","italic","","")
-call s:X("Comment","616161","000000","italic","","")
+call s:X("Comment","858585","000000","italic","","")
 call s:X("Todo","82c78f","000000","bold","","")
 " Status Lines
 call s:X("StatusLineNC","000000","eeeeee","bold","","")
