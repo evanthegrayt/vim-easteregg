@@ -16,7 +16,7 @@ The font used in the examples is [11pt. Hack](https://sourcefoundry.org/hack/).
 set guifont=Hack:h11
 ```
 
-![](resource/easteregg.jpg)
+![](images/easteregg.jpg)
 
 ## Installation
 ### Version 8
