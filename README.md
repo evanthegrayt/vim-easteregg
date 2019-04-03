@@ -9,12 +9,16 @@ but wanted more colors for different keywords. I kept adding more colors, but
 tried to keep a lot of them pastel-ish. The colors and the inspiration from
 `Jellybeans` is where I got the name `Easteregg`.
 
-## Screenshot Examples
+## Screenshot Example
 The font used in the examples is [11pt. Hack](https://sourcefoundry.org/hack/).
-
 ```vim
 set guifont=Hack:h11
 ```
+The languages in the image, from left to right, top to bottom, are:
+- ruby
+- viml
+- bash
+- cpp
 
 ![](images/easteregg.jpg)
 
@@ -44,6 +48,5 @@ let g:easteregg_use_italics = 1
 colorscheme easteregg
 ```
 If your terminal doesn't have italics enabled (which is default for most
-terminal emulators), you'll need to [research how to enable them
-](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3).
+terminal emulators), you'll need to [research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3).
 
