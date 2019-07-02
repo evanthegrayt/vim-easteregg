@@ -384,8 +384,10 @@ call s:X("DiffChange","","100920","","","")
 call s:X("DiffDelete","220000","220000","","","")
 call s:X("DiffText","","000940","","","")
 " Spelling
-call s:X("SpellBad", "000000", "f06363", "bold", "", "")
-call s:X("SpellCap", "000000", "de97ab", "bold", "", "")
+call s:X("SpellBad",   "000000", "ff2b2b", "bold", "", "")
+call s:X("SpellCap",   "000000", "ff552b", "bold", "", "")
+call s:X("SpellLocal", "000000", "ff9036", "bold", "", "")
+call s:X("SpellRare",  "000000", "ffd52b", "bold", "", "")
 
 hi link Error ErrorMsg
 
