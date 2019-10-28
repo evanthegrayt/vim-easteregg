@@ -48,5 +48,6 @@ let g:easteregg_use_italics = 1
 colorscheme easteregg
 ```
 If your terminal doesn't have italics enabled (which is default for most
-terminal emulators), you'll need to [research how to enable them](https://github.com/evanthegrayt/dotfiles/blob/master/resource/xterm-256color.terminfo#L3).
+terminal emulators), you'll need to [research how to enable
+them](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3).
 
