@@ -3,11 +3,11 @@ A very colorful, dark-themed colorscheme for `vim`, inspired by
 [Jellybeans.vim](https://github.com/nanotech/jellybeans.vim/blob/master/colors/jellybeans.vim).
 
 ## About
-A few years ago, I started using the `Jellybeans` colorscheme, but I've modified
-it so much over the years, it's become its own entity. I liked the darker theme,
-but wanted more colors for different keywords. I kept adding more colors, but
-tried to keep a lot of them pastel-ish. The colors and the inspiration from
-`Jellybeans` is where I got the name `Easteregg`.
+A few years ago, I started using the `Jellybeans` colorscheme, but I have
+modified it so much over the years, it's become its own entity. I liked the
+darker theme, but wanted more colors for different keywords. I kept adding more
+colors, but tried to keep a lot of them pastel-ish. The color pallette, plus the
+inspiration from `Jellybeans`, is where I got the name `Easteregg`.
 
 ## Screenshot Example
 The font used in the examples is [11pt. Hack](https://sourcefoundry.org/hack/).
