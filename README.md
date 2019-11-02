@@ -1,6 +1,6 @@
 # vim-easteregg
 A very colorful, dark-themed colorscheme for `vim`, inspired by
-[Jellybeans.vim](https://github.com/nanotech/jellybeans.vim/blob/master/colors/jellybeans.vim).
+[Jellybeans.vim](https://github.com/nanotech/jellybeans.vim).
 
 ## About
 A few years ago, I started using the `Jellybeans` colorscheme, but I have
@@ -28,7 +28,7 @@ If you're using `vim` version 8, clone the directory under one of your package
 directories.
 
 ```bash
-git clone https://github.com/evanthegrayt/vim-easteregg.git ~/.vim/pack/[PACKAGE_DIRECTORY]/start/easteregg
+git clone https://github.com/evanthegrayt/vim-easteregg.git ~/.vim/pack/$PACKAGE_DIRECTORY/start/easteregg
 ```
 
 ### Pathogen
