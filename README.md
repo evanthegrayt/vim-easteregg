@@ -20,7 +20,7 @@ The languages in the image, from left to right, top to bottom, are:
 - bash
 - cpp
 
-![](images/easteregg.jpg)
+![](https://user-images.githubusercontent.com/12698076/69293829-adc92d80-0bcf-11ea-867d-943080006a44.jpg)
 
 ## Installation
 ### Version 8
