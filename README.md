@@ -51,3 +51,8 @@ If your terminal doesn't have italics enabled (which is default for most
 terminal emulators), you'll need to [research how to enable
 them](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3).
 
+## Self Promotion
+I do these projects for fun, and I enjoy knowing that they're helpful to people.
+Consider starring [the
+repository](https://github.com/evanthegrayt/vim-easteregg) if you like it! If
+you love it, follow me [on github](https://github.com/evanthegrayt)!
