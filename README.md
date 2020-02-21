@@ -24,7 +24,7 @@ For larger examples, see
 [vimscript](https://user-images.githubusercontent.com/12698076/74897836-da6f1b80-535d-11ea-9b57-0e02035992fe.png),
 [bash](https://user-images.githubusercontent.com/12698076/74898172-b5c77380-535e-11ea-9d46-0baf0f625934.png),
 and
-[php](https://user-images.githubusercontent.com/12698076/74898334-32f2e880-535f-11ea-8b0b-11557ed63727.png).
+[php](https://user-images.githubusercontent.com/12698076/75001489-220daa00-5427-11ea-9e4f-128a74ee2ee5.png).
 
 ## Installation
 ### Version 8
