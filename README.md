@@ -32,7 +32,9 @@ If you're using `vim` version 8, clone the directory under one of your package
 directories.
 
 ```bash
-git clone https://github.com/evanthegrayt/vim-easteregg.git ~/.vim/pack/$PACKAGE_DIRECTORY/start/easteregg
+mkdir -p ~/.vim/pack/evanthegrayt/start/easteregg
+git clone https://github.com/evanthegrayt/vim-easteregg.git \
+    ~/.vim/pack/evanthegrayt/start/easteregg
 ```
 
 ### Pathogen
