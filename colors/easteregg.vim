@@ -30,13 +30,13 @@ set background=dark
 
 hi clear
 
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
 
-let colors_name = "easteregg"
+let colors_name = 'easteregg'
 
-if has("gui_running") || &t_Co == 88 || &t_Co == 256
+if has('gui_running') || &t_Co == 88 || &t_Co == 256
   let s:low_color = 0
 else
   let s:low_color = 1
@@ -232,9 +232,9 @@ endfun
 
 " returns the palette index to approximate the 'rrggbb' hex string
 fun! s:rgb(rgb)
-  let l:r = ("0x" . strpart(a:rgb, 0, 2)) + 0
-  let l:g = ("0x" . strpart(a:rgb, 2, 2)) + 0
-  let l:b = ("0x" . strpart(a:rgb, 4, 2)) + 0
+  let l:r = ('0x' . strpart(a:rgb, 0, 2)) + 0
+  let l:g = ('0x' . strpart(a:rgb, 2, 2)) + 0
+  let l:b = ('0x' . strpart(a:rgb, 4, 2)) + 0
   return s:color(l:r, l:g, l:b)
 endfun
 
@@ -245,153 +245,169 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
     let l:bge = empty(a:lcbg)
 
     if !l:fge && !l:bge
-      exec "hi ".a:group." ctermfg=".a:lcfg." ctermbg=".a:lcbg
+      exec 'hi '.a:group.' ctermfg='.a:lcfg.' ctermbg='.a:lcbg
     elseif !l:fge && l:bge
-      exec "hi ".a:group." ctermfg=".a:lcfg." ctermbg=NONE"
+      exec 'hi '.a:group.' ctermfg='.a:lcfg.' ctermbg=NONE'
     elseif l:fge && !l:bge
-      exec "hi ".a:group." ctermfg=NONE ctermbg=".a:lcbg
+      exec 'hi '.a:group.' ctermfg=NONE ctermbg='.a:lcbg
     endif
   else
     let l:fge = empty(a:fg)
     let l:bge = empty(a:bg)
 
     if !l:fge && !l:bge
-      exec "hi ".a:group." guifg=#".a:fg." guibg=#".a:bg." ctermfg=".s:rgb(a:fg)." ctermbg=".s:rgb(a:bg)
+      exec 'hi '.a:group.' guifg=#'.a:fg.' guibg=#'.a:bg.' ctermfg='.s:rgb(a:fg).' ctermbg='.s:rgb(a:bg)
     elseif !l:fge && l:bge
-      exec "hi ".a:group." guifg=#".a:fg." guibg=NONE ctermfg=".s:rgb(a:fg)
+      exec 'hi '.a:group.' guifg=#'.a:fg.' guibg=NONE ctermfg='.s:rgb(a:fg)
     elseif l:fge && !l:bge
-      exec "hi ".a:group." guifg=NONE guibg=#".a:bg." ctermbg=".s:rgb(a:bg)
+      exec 'hi '.a:group.' guifg=NONE guibg=#'.a:bg.' ctermbg='.s:rgb(a:bg)
     endif
   endif
 
   if a:attr == ""
-    exec "hi ".a:group." gui=none cterm=none"
+    exec 'hi '.a:group.' gui=none cterm=none'
   else
     if a:attr == 'italic'
       if exists('g:easteregg_use_italics') && g:easteregg_use_italics
-        exec "hi ".a:group." gui=".a:attr." cterm=italic"
+        exec 'hi '.a:group.' gui='.a:attr.' cterm=italic'
       else
-        exec "hi ".a:group." gui=".a:attr." cterm='NONE'"
+        exec 'hi '.a:group.' gui='.a:attr.' cterm='NONE''
       endif
     else
-      exec "hi ".a:group." gui=".a:attr." cterm=".a:attr
+      exec 'hi '.a:group.' gui='.a:attr.' cterm='.a:attr
     endif
   endif
 endfun
 " }}}
-"
+
+" Color palette
+let s:no_color      = ''
+let s:slate_blue    = '536991'
+let s:light_salmon  = 'fa8989'
+let s:salmon_pink   = '8f5370'
+let s:salmon        = 'cf6a4c'
+let s:black         = '000000'
+let s:lavender      = 'a56aa8'
+let s:light_purple  = 'c7b6db'
+let s:dark_slate    = '384048'
+let s:light_grey    = 'a0a8b0'
+let s:grey          = '5e5e5e'
+let s:grey_brown    = '474545'
+let s:dark_grey     = '222222'
+let s:darker_grey   = '1B1D1E'
+let s:ripe_banana   = 'cae682'
+let s:neon_green    = '66ff66'
+let s:yellow        = 'ffd52b'
+let s:bright_yellow = 'ebdf32'
+let s:burnt_orange  = 'eb3232'
+let s:off_white     = 'eeeeee'
+let s:egg_shell     = 'e8e8d3'
+let s:aqua          = '6bbfbb'
+let s:light_pink    = 'f1adff'
+let s:pink          = 'de97ab'
+let s:dark_maroon   = '302028'
+let s:pastel_green  = 'c4ffc8'
+let s:light_blue    = '8fbfdc'
+let s:another_slate = '668594'
+let s:light_green   = '82c78f'
+let s:lime_green    = '70b950'
+let s:error_red     = 'ff0040'
+let s:blue          = '4059bd'
+let s:navy          = '000940'
+let s:dark_navy     = '100920'
+let s:orange        = 'ff9036'
+let s:red_orange    = 'ff552b'
+let s:very_dark_red = '220000'
+let s:hunter_green  = '032218'
+
 if version >= 700
-  "CSV support
-  call s:X("CSVColumnHeaderOdd","","536991","","","")
-  call s:X("CSVColumnHeaderEven","","8f5370","","","")
-  call s:X("CSVColumnOdd","","536991","","","")
-  call s:X("CSVColumnEven","","8f5370","","","")
-  " CursorLine/Column
-  call s:X("CursorLine","","000000","","","")
-  call s:X("CursorColumn","","000000","","","")
-  call s:X("ColorColumn","","000000","","","")
-  call s:X("MatchParen","a56aa8","474545","bold","","")
-  " TabLink
-  call s:X("TabLine","000000","b0b8c0","italic","","")
-  call s:X("TabLineFill","9098a0","","","","")
-  call s:X("TabLineSel","000000","f0f0f0","italic,bold","","")
-  "Auto-completion
-  call s:X("Pmenu","C3C3C3","222222","","","")
-  call s:X("PmenuSel","cae682","404040","","","")
-  call s:X("PMenuSbar","C3C3C3","222222","","","")
-  call s:X("PMenuThumb","C3C3C3","222222","","","")
-  " Indent Guides
-  call s:X("IndentGuidesOdd","616161","000000","bold","","")
-  call s:X("IndentGuidesEven","000000","616161","bold","","")
-  " Git Gutter
-  call s:X("GitGutterAdd","66ff66","000000","","","")
-  call s:X("GitGutterChange","ebdf32","000000","","","")
-  call s:X("GitGutterDelete","eb3232","000000","","","")
-  call s:X("GitGutterChangeDelete","eb3232","000000","","","")
+  call s:X('CSVColumnHeaderOdd',     '',               s:slate_blue,   '',        '',  '')
+  call s:X('CSVColumnHeaderEven',    '',               s:salmon_pink,  '',        '',  '')
+  call s:X('CSVColumnOdd',           '',               s:slate_blue,   '',        '',  '')
+  call s:X('CursorLine',             '',               s:black,        '',        '',  '')
+  call s:X('CursorColumn',           '',               s:black,        '',        '',  '')
+  call s:X('ColorColumn',            '',               s:black,        '',        '',  '')
+  call s:X('MatchParen',             s:lavender,       s:grey_brown,   'bold',    '',  '')
+  call s:X('TabLine',                s:black,          s:light_grey,   'italic',  '',  '')
+  call s:X('TabLineFill',            s:light_grey,     '',             '',        '',  '')
+  call s:X('TabLineSel',             s:black,          s:light_grey,   'italic',  '',  '')
+  call s:X('Pmenu',                  s:light_grey,     s:dark_grey,    '',        '',  '')
+  call s:X('PmenuSel',               s:ripe_banana,    s:dark_grey,    '',        '',  '')
+  call s:X('PMenuSbar',              s:light_grey,     s:dark_grey,    '',        '',  '')
+  call s:X('PMenuThumb',             s:light_grey,     s:dark_grey,    '',        '',  '')
+  call s:X('IndentGuidesOdd',        s:grey_brown,     s:black,        'bold',    '',  '')
+  call s:X('IndentGuidesEven',       s:black,          s:grey_brown,   'bold',    '',  '')
+  call s:X('GitGutterAdd',           s:neon_green,     s:black,        '',        '',  '')
+  call s:X('GitGutterChange',        s:bright_yellow,  s:black,        '',        '',  '')
+  call s:X('GitGutterDelete',        s:burnt_orange,   s:black,        '',        '',  '')
+  call s:X('GitGutterChangeDelete',  s:burnt_orange,   s:black,        '',        '',  '')
 endif
-" Visual Mode and Cursor
-call s:X("Visual","f1adff","302028","underline","","")
-call s:X("Cursor","000000","c4ffc8","underline","","")
-" Non-code Text (THE TOP LINE SETS THE BACKGROUND!)
-call s:X("Normal","e8e8d3","1B1D1E","","","")
-call s:X("LineNr","eeeeee","000000","italic","","")
-call s:X("Comment","858585","000000","italic","","")
-call s:X("Todo","82c78f","000000","bold","","")
-" Status Lines
-call s:X("StatusLineNC","000000","eeeeee","bold","","")
-call s:X("StatusLine","000000","eeeeee","bold","","")
-call s:X("VertSplit","eeeeee","000000","bold","","")
-" Folds
-call s:X("Folded","a0a8b0","384048","underline","","")
-call s:X("FoldColumn","a0a8b0","384048","","","")
-call s:X("SignColumn","a0a8b0","384048","","","")
-call s:X("Title","70b950","","bold","","")
-" Constants
-call s:X("Constant","cf6a4c","","italic","","")
-call s:X("String","de97ab","","","","")
-call s:X("Character","c7b6db","","","","")
-call s:X("Number","6bbfbb","","","","")
-call s:X("Boolean","6bbfbb","","italic","","")
-call s:X("Float","6bbfbb","","","","")
-" Identifiers
-call s:X("Identifier","fa8989","","","","")
-call s:X("Function","cf745b","","","","")
-" Statements
-call s:X("Conditional","8197bf","","bold","","")
-call s:X("Statement","7cb37c","","bold","","")
-call s:X("Repeat","819bde","","bold","","")
-call s:X("Label","e0c98d","","bold","","")
-call s:X("Operator","c77a56","","","","")
-call s:X("Keyword","b05858","","","","")
-call s:X("Exception","d4cc77","","","","")
-" PreProc
-call s:X("PreProc","8fbfdc","","bold","","")
-call s:X("Include","dbcb7d","","bold","","")
-call s:X("Define","7ddbc0","","bold","","")
-call s:X("Macro","c6ffba","","bold","","")
-call s:X("PreCondit","ffc8ba","","bold","","")
-" Type
-call s:X("Type","8ecc7e","","italic","","")
-call s:X("StorageClass","c59f6f","","","","")
-call s:X("Structure","8ecc7e","","","","")
-call s:X("Typedef","8ecc7e","","","","")
-" Special
-call s:X("Special","668594","","","","")
-call s:X("SpecialChar","eeeeee","313131","","","")
-call s:X("Tag","668594","","","","")
-call s:X("Delimiter","ccac85","","","","")
-call s:X("SpecialComment","668594","000000","","","")
-call s:X("Debug","668594","","","","")
-" HTML Links
-call s:X("Underlined","4059bd","","underline","","")
-" Ignored
-call s:X("Ignore","4059bd","","underline","","")
-" Error
-call s:X("Error","","ff0040","underline","","")
-"listchars
-call s:X("NonText","5e5e5e","","","","")
-call s:X("SpecialKey","5e5e5e","","","","")
-" Other
-call s:X("StringDelimiter","77d47d","","bold","","")
-call s:X("Structure","8fbfdc","","","","")
-call s:X("Search","d1c78a","302028","underline","","")
-call s:X("Directory","902020","000000","","","")
-call s:X("ErrorMsg","e06b83","000000","","","")
-call s:X("Question","000000","668594","","","")
-" VimDiff
-call s:X("DiffAdd","","032218","","","")
-call s:X("DiffChange","","100920","","","")
-call s:X("DiffDelete","220000","220000","","","")
-call s:X("DiffText","","000940","","","")
-" Spelling
-call s:X("SpellBad",   "000000", "ff2b2b", "bold", "", "")
-call s:X("SpellCap",   "000000", "ff552b", "bold", "", "")
-call s:X("SpellLocal", "000000", "ff9036", "bold", "", "")
-call s:X("SpellRare",  "000000", "ffd52b", "bold", "", "")
+call s:X('Visual',           s:light_pink,     s:dark_maroon,    'underline',  '',  '')
+call s:X('Cursor',           s:black,          s:pastel_green,   'underline',  '',  '')
+call s:X('Normal',           s:egg_shell,      s:darker_grey,    '',           '',  '')
+call s:X('LineNr',           s:off_white,      s:black,          'italic',     '',  '')
+call s:X('Comment',          s:light_grey,     s:black,          'italic',     '',  '')
+call s:X('Todo',             s:light_green,    s:black,          'bold',       '',  '')
+call s:X('StatusLineNC',     s:black,          s:off_white,      'bold',       '',  '')
+call s:X('StatusLine',       s:black,          s:off_white,      'bold',       '',  '')
+call s:X('VertSplit',        s:off_white,      s:black,          'bold',       '',  '')
+call s:X('Folded',           s:light_grey,     s:black,          'underline',  '',  '')
+call s:X('FoldColumn',       s:light_grey,     s:black,          '',           '',  '')
+call s:X('SignColumn',       s:light_grey,     s:black,          '',           '',  '')
+call s:X('Title',            s:lime_green,     '',               'bold',       '',  '')
+call s:X('Constant',         s:salmon,         '',               'italic',     '',  '')
+call s:X('String',           s:pink,           '',               '',           '',  '')
+call s:X('Character',        s:light_purple,   '',               '',           '',  '')
+call s:X('Number',           s:aqua,           '',               '',           '',  '')
+call s:X('Boolean',          s:aqua,           '',               'italic',     '',  '')
+call s:X('Float',            s:aqua,           '',               '',           '',  '')
+call s:X('Identifier',       s:light_salmon,   '',               '',           '',  '')
+call s:X('Function',         'cf745b',         '',               '',           '',  '')
+call s:X('Conditional',      '8197bf',         '',               'bold',       '',  '')
+call s:X('Statement',        '7cb37c',         '',               'bold',       '',  '')
+call s:X('Repeat',           '819bde',         '',               'bold',       '',  '')
+call s:X('Label',            'e0c98d',         '',               'bold',       '',  '')
+call s:X('Operator',         'c77a56',         '',               '',           '',  '')
+call s:X('Keyword',          'b05858',         '',               '',           '',  '')
+call s:X('Exception',        'd4cc77',         '',               '',           '',  '')
+call s:X('PreProc',          s:light_blue,     '',               'bold',       '',  '')
+call s:X('Include',          'dbcb7d',         '',               'bold',       '',  '')
+call s:X('Define',           '7ddbc0',         '',               'bold',       '',  '')
+call s:X('Macro',            'c6ffba',         '',               'bold',       '',  '')
+call s:X('PreCondit',        'ffc8ba',         '',               'bold',       '',  '')
+call s:X('Type',             s:light_green,    '',               'italic',     '',  '')
+call s:X('StorageClass',     'c59f6f',         '',               '',           '',  '')
+call s:X('Structure',        s:light_green,    '',               '',           '',  '')
+call s:X('Typedef',          s:light_green,    '',               '',           '',  '')
+call s:X('Special',          s:another_slate,  '',               '',           '',  '')
+call s:X('SpecialChar',      s:off_white,      s:dark_grey,      '',           '',  '')
+call s:X('Tag',              s:another_slate,  '',               '',           '',  '')
+call s:X('Delimiter',        'ccac85',         '',               '',           '',  '')
+call s:X('SpecialComment',   s:another_slate,  s:black,          '',           '',  '')
+call s:X('Debug',            s:another_slate,  '',               '',           '',  '')
+call s:X('Underlined',       s:blue,           '',               'underline',  '',  '')
+call s:X('Ignore',           s:blue,           '',               'underline',  '',  '')
+call s:X('Error',            '',               s:error_red,      'underline',  '',  '')
+call s:X('NonText',          s:grey,           '',               '',           '',  '')
+call s:X('SpecialKey',       s:grey,           '',               '',           '',  '')
+call s:X('StringDelimiter',  '77d47d',         '',               'bold',       '',  '')
+call s:X('Structure',        s:light_blue,     '',               '',           '',  '')
+call s:X('Search',           'd1c78a',         s:dark_maroon,    'underline',  '',  '')
+call s:X('Directory',        '902020',         s:black,          '',           '',  '')
+call s:X('ErrorMsg',         'e06b83',         s:black,          '',           '',  '')
+call s:X('Question',         s:black,          s:another_slate,  '',           '',  '')
+call s:X('DiffAdd',          '',               s:hunter_green,   '',           '',  '')
+call s:X('DiffChange',       '',               s:dark_navy,      '',           '',  '')
+call s:X('DiffDelete',       '',               s:very_dark_red,  '',           '',  '')
+call s:X('DiffText',         '',               s:navy,           '',           '',  '')
+call s:X('SpellBad',         s:black,          s:error_red,      'bold',       '',  '')
+call s:X('SpellCap',         s:black,          s:red_orange,     'bold',       '',  '')
+call s:X('SpellLocal',       s:black,          s:orange,         'bold',       '',  '')
+call s:X('SpellRare',        s:black,          s:yellow,         'bold',       '',  '')
 
 hi link Error ErrorMsg
 
-"ZSH
+" ZSH
 hi link zshSharpBang        Comment
 hi link zshTodo             Todo
 hi link zshComment          Comment

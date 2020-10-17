@@ -2,6 +2,10 @@
 A very colorful, dark-themed colorscheme for `vim`, inspired by
 [Jellybeans.vim](https://github.com/nanotech/jellybeans.vim).
 
+If you use [vim-airline](https://github.com/vim-airline/vim-airline), be sure to
+check out my [companion
+theme](https://github.com/evanthegrayt/vim-easteregg-airline).
+
 ## About
 A few years ago, I started using the `Jellybeans` colorscheme, but I have
 modified it so much over the years, it's become its own entity. I liked the
@@ -32,7 +36,7 @@ If you're using `vim` version 8, clone the directory under one of your package
 directories.
 
 ```bash
-mkdir -p ~/.vim/pack/evanthegrayt/start/easteregg
+mkdir -p ~/.vim/pack/evanthegrayt/start
 git clone https://github.com/evanthegrayt/vim-easteregg.git \
     ~/.vim/pack/evanthegrayt/start/easteregg
 ```
