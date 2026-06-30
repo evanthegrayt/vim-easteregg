@@ -1,17 +1,17 @@
 # vim-easteregg
-A very colorful, dark-themed colorscheme for `vim`, inspired by
-[Jellybeans.vim](https://github.com/nanotech/jellybeans.vim).
+A very colorful, dark-themed colorscheme for `vim`.
 
 If you use [vim-airline](https://github.com/vim-airline/vim-airline), be sure to
 check out my [companion
-theme](https://github.com/evanthegrayt/vim-easteregg-airline).
+theme](https://github.com/evanthegrayt/vim-easteregg-airline)!
 
 ## About
-A few years ago, I started using the `Jellybeans` colorscheme, but I have
+Years ago, I started using the
+[Jellybeans](https://github.com/nanotech/jellybeans.vim) colorscheme, but I have
 modified it so much over the years, it's become its own entity. I liked the
-darker theme, but wanted more colors for different keywords. I kept adding more
-colors, but tried to keep a lot of them pastel-ish. The color pallette, plus the
-inspiration from `Jellybeans`, is where I got the name `Easteregg`.
+darker theme, but wanted more colors for different keywords.  The pastel color
+palette, plus the inspiration from `Jellybeans`, is where I got the name
+`Easteregg`.
 
 ## Screenshot Examples
 The font used in the examples is [11pt. Hack](https://sourcefoundry.org/hack/).
@@ -61,8 +61,10 @@ If your terminal doesn't have italics enabled (which is default for most
 terminal emulators), you'll need to [research how to enable
 them](https://github.com/evanthegrayt/dotfiles/blob/master/dotfiles/xterm-256color.terminfo#L3).
 
-## Self Promotion
-I do these projects for fun, and I enjoy knowing that they're helpful to people.
-Consider starring [the
-repository](https://github.com/evanthegrayt/vim-easteregg) if you like it! If
-you love it, follow me [on github](https://github.com/evanthegrayt)!
+## Support this project
+I love knowing when people find my work useful. Any kind of support is very much
+appreciated!
+
+- ⭐️ Like the project? Star [the repository](https://github.com/evanthegrayt/vim-easteregg)!
+- ❤️ Love the project? Follow me [on GitHub](https://github.com/evanthegrayt)!
+- 💸 *Really* love it? Consider [buying me a tea](https://paypal.me/evanrgray)!

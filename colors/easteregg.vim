@@ -1,30 +1,7 @@
 " Vim color file
-" File:         easteregg.vim - a colorscheme for vim
-" Maintainer:   Evan Gray <egray1985@gmail.com>
+" File:         easteregg.vim - a colorful colorscheme for vim.
+" Maintainer:   Evan Gray <evanthegrayt@gmail.com>
 " Version:      2.0
-" Last Change:  Tue Nov 11 07:32:53 2014
-" Creators:     NanoTech <http://nanotech.nanotechcorp.net/>
-"               Re-done by Evan Gray
-"
-" Copyright (c) 2009-2010 NanoTech
-"
-" Permission is hereby granted, free of charge, to any person obtaining a copy
-" of this software and associated documentation files (the 'Software'), to deal
-" in the Software without restriction, including without limitation the rights
-" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-" copies of the Software, and to permit persons to whom the Software is
-" furnished to do so, subject to the following conditions:
-"
-" The above copyright notice and this permission notice shall be included in
-" all copies or substantial portions of the Software.
-"
-" THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-" THE SOFTWARE.
 
 set background=dark
 
@@ -41,9 +18,6 @@ if has('gui_running') || &t_Co == 88 || &t_Co == 256
 else
   let s:low_color = 1
 endif
-
-" Color approximation functions by Henry So, Jr. and David Liang {{{
-" Added to easteregg.vim by Evan Gray
 
 " returns an approximate grey index for the given grey level
 fun! s:grey_number(x)
